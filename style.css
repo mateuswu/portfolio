@@ -125,3 +125,124 @@ footer{
     .pagina{width:88%;padding:75px 0 85px}
     footer{padding:22px 6%;flex-wrap:wrap}
 }
+
+.glitch-pagina {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.glitch-intro {
+    margin-bottom: 75px;
+}
+
+.glitch-intro h1 {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    letter-spacing: -.06em;
+}
+
+.glitch-intro h1 span {
+    color: var(--destaque);
+}
+
+.glitch-descricao {
+    max-width: 650px;
+    margin-top: 25px;
+    color: var(--suave);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.glitch-galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    margin-bottom: 100px;
+}
+
+.glitch-card {
+    min-width: 0;
+}
+
+.numero {
+    color: var(--destaque);
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .13em;
+}
+
+.glitch-card h2 {
+    margin: 12px 0 20px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.6rem;
+}
+
+.glitch-imagem {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #252525;
+    border: 1px solid #353535;
+    border-radius: 4px;
+}
+
+.glitch-imagem img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.glitch-imagem img:hover {
+    transform: scale(1.04);
+}
+
+.glitch-card p {
+    margin-top: 18px;
+    color: var(--suave);
+    font-size: .9rem;
+    line-height: 1.8;
+}
+
+.glitch-texto {
+    max-width: 850px;
+    margin-bottom: 85px;
+    padding-top: 35px;
+    border-top: 1px solid #353535;
+}
+
+.glitch-texto h2 {
+    margin: 0 0 25px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -.04em;
+}
+
+.glitch-texto > p:not(.etiqueta) {
+    color: var(--suave);
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+@media(max-width: 700px) {
+
+    .glitch-pagina {
+        padding-top: 60px;
+    }
+
+    .glitch-intro {
+        margin-bottom: 50px;
+    }
+
+    .glitch-galeria {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        margin-bottom: 75px;
+    }
+
+    .glitch-texto {
+        margin-bottom: 65px;
+    }
+
+}
