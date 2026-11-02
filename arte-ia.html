@@ -3,26 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio digital sobre arte, técnica e tecnologia.">
-  <title>Arte gerada por inteligência artificial | Portfólio</title>
+  <meta name="description" content="Arte gerada por inteligência artificial — exclusão digital no futuro.">
+  <title>Arte com IA | Portfólio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topo">
     <a class="marca" href="index.html">PORTFÓLIO<span>.</span></a>
     <nav aria-label="Menu principal">
-      <a href="index.html" class="">Início</a>
+      <a href="index.html">Início</a>
       <a href="arte-ia.html" class="ativo">Arte com IA</a>
-      <a href="pixel-art.html" class="">Pixel Art</a>
-      <a href="glitch-art.html" class="">Glitch Art</a>
-      <a href="css-art.html" class="">CSS Art</a>
+      <a href="pixel-art.html">Pixel Art</a>
+      <a href="glitch-art.html">Glitch Art</a>
+      <a href="css-art.html">CSS Art</a>
     </nav>
   </header>
 
-  <main class="pagina tema">
-    <p class="etiqueta">PORTFÓLIO DIGITAL • PRODUÇÕES</p>
-    <h1>Arte gerada por inteligência artificial</h1>
+  <main class="pagina ia-pagina">
+
+    <!-- APRESENTAÇÃO -->
+    <section class="ia-intro">
+      <p class="etiqueta">PORTFÓLIO DIGITAL • PRODUÇÕES</p>
+      <h1>ARTE COM <span>IA</span></h1>
+      <p class="ia-descricao">
+        Como a linguagem pode ser usada como ferramenta de criação artística
+        através da Inteligência Artificial. Este registro mostra o tema
+        <strong>exclusão digital</strong> em um cenário <strong>futurista</strong>,
+        desde o prompt inicial até a imagem final, com todas as tentativas
+        de refinamento.
+      </p>
+      <div class="ia-temas">
+        <span class="ia-tag">Exclusão digital</span>
+        <span class="ia-tag">Cenário futurista</span>
+        <span class="ia-tag">IA generativa de imagens</span>
+      </div>
+    </section>
+
+    <!-- 01 — IMAGEM FINAL -->
+    <section class="ia-secao">
+      <p class="numero">01 / IMAGEM FINAL</p>
+      <h2>A obra gerada</h2>
+
+      <figure class="ia-figura" id="figura-final">
+        <img
+          src="imagens/arte-ia-final.jpg"
+          alt="Imagem gerada por IA: pessoa idosa sozinha em beco futurista com letreiros de neon, olhando um aparelho apagado — exclusão digital"
+          onerror="this.closest('.ia-figura').classList.add('sem-imagem')"
+        >
+        <figcaption class="ia-placeholder">
+          <strong>Imagem final ainda não adicionada</strong>
+          Gere a imagem com uma ferramenta de IA (usando o prompt final abaixo),
+          salve como <code>imagens/arte-ia-final.jpg</code> e recarregue a página.
+        </figcaption>
+      </figure>
+      <p class="ia-legenda">
+        Figura 1 — “Fora da rede”: uma pessoa idosa sozinha em um beco de uma
+        cidade futurista iluminada por neon, olhando um aparelho apagado enquanto
+        todos ao redor estão conectados. Tema: exclusão digital.
+      </p>
+    </section>
+
+    <!-- 02 — PROMPTS -->
+    <section class="ia-secao">
+      <p class="numero">02 / REGISTRO DOS PROMPTS</p>
+      <h2>Do prompt inicial ao resultado</h2>
+
+      <div class="ia-duas-colunas">
+        <article class="ia-card">
+          <span class="ia-card-label">PROMPT INICIAL</span>
+          <p class="ia-prompt">uma pessoa sozinha sem internet no futuro</p>
+          <p class="ia-card-nota">Ideia bruta, sem direção técnica.</p>
+        </article>
+
+        <article class="ia-card ia-card-destaque">
+          <span class="ia-card-label">PROMPT FINAL</span>
+          <p class="ia-prompt">pessoa idosa sentada sozinha no chão de um beco
+          urbano à noite sob chuva, letreiros de neon brilhando nas fachadas
+          (lojas de eletrônicos e restaurantes), ela olhando um aparelho apagado
+          no colo, luz azul fria da chuva contra luz laranja do neon, lente 50mm,
+          profundidade de campo rasa, estética cyberpunk, film grain,
+          atmosfera melancólica, exclusão digital, alta definição</p>
+          <p class="ia-card-nota">Resultado final — equilíbrio entre tema,
+          técnica e atmosfera.</p>
+        </article>
+      </div>
+
+      <p class="ia-subtitulo">Tentativas de refinamento</p>
+
+      <ol class="ia-timeline">
+        <li class="ia-passo">
+          <span class="ia-passo-num">1</span>
+          <div class="ia-passo-corpo">
+            <strong>Tentativa 1 — luz e lente</strong>
+            <p class="ia-prompt">uma pessoa sozinha sem acesso à internet em uma
+            cidade futurista, luz fria de telas no rosto, lente 35mm, alto contraste</p>
+            <p class="ia-card-nota">O que mudou: entraram termos técnicos de
+            <em>iluminação</em> (luz fria das telas) e <em>lente</em> (35mm).
+            Por quê: a imagem anterior era genérica e sem atmosfera.</p>
+          </div>
+        </li>
+        <li class="ia-passo">
+          <span class="ia-passo-num">2</span>
+          <div class="ia-passo-corpo">
+            <strong>Tentativa 2 — artista de referência e época</strong>
+            <p class="ia-prompt">uma pessoa sozinha em uma metrópole futurista à
+            noite, hologramas, chuva, estilo Syd Mead, anos 2070, iluminação
+            cinematográfica, tons de azul e laranja</p>
+            <p class="ia-card-nota">O que mudou: referência de artista
+            (<em>Syd Mead</em>, futurista clássico) e <em>época</em> (anos 2070).
+            Por quê: para dar identidade visual e coerência com o tema futurista.</p>
+          </div>
+        </li>
+        <li class="ia-passo">
+          <span class="ia-passo-num">3</span>
+          <div class="ia-passo-corpo">
+            <strong>Tentativa 3 — sujeito e emoção</strong>
+            <p class="ia-prompt">mulher idosa sentada sozinha no chão de um beco,
+            olhando um aparelho apagado, hologramas acima dela, lente 50mm,
+            profundidade de campo rasa, film grain, atmosfera melancólica</p>
+            <p class="ia-card-nota">O que mudou: sujeito definido (idosa +
+            aparelho apagado) e <em>profundidade de campo</em>. Por quê: tornar
+            a exclusão digital visível e emocional, não apenas cenário bonito.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- 03 — PROCESSO -->
+    <section class="ia-secao">
+      <p class="numero">03 — PROCESSO CRIATIVO</p>
+      <h2>O que mudou e por quê</h2>
+      <p>
+        O processo começou com uma frase simples e evoluiu a cada rodada.
+        Na primeira tentativa, foram adicionados <strong>termos técnicos de
+        iluminação e enquadramento</strong> (luz fria das telas, lente 35mm)
+        para transformar a ideia abstrata em uma cena possível de ser renderizada.
+      </p>
+      <p>
+        Na segunda, entrou uma <strong>referência artística</strong> (Syd Mead,
+        designer de futuros dos anos 2070) e uma <strong>época definida</strong>,
+        o que deu unidade ao estilo — sem isso, a IA misturava estilos
+        diferentes em cada geração.
+      </p>
+      <p>
+        Por fim, a terceira tentativa fixou o <strong>sujeito</strong> (uma
+        mulher idosa diante de um aparelho apagado) e a <strong>emoção</strong>
+        desejada. Cada ajuste surgiu de um problema: a cena estava genérica,
+        depois sem estilo, depois bonita demais e pouco humana.
+      </p>
+    </section>
+
+    <!-- 04 — REFLEXÃO -->
+    <section class="ia-secao ia-reflexao">
+      <p class="numero">04 — REFLEXÃO ARTÍSTICA</p>
+      <h2>O resultado correspondeu à intenção?</h2>
+      <p>
+        A intenção original era mostrar a <strong>exclusão digital</strong> não
+        como ausência de aparelhos, mas como <strong>solidão no meio da
+        tecnologia</strong> — alguém rodeado de conexões e mesmo assim
+        desconectado.
+      </p>
+      <p>
+        O resultado final correspondeu à intenção: a cena futurista mantém a
+        promessa visual do tema proposto, e a figura humana no centro do
+        enquadramento devolve o foco para quem fica de fora da rede. A
+        limitação da ferramenta — a IA às vezes ignora detalhes do rosto ou
+        de textos — foi contornada mantendo o sujeito pequeno dentro da
+        cena, fazendo parte da narrativa.
+      </p>
+      <p class="ia-final-nota">
+        Aprender a “conversar” com a IA mostrou que o prompt é roteiro:
+        <strong>quanto mais preciso o direcionamento técnico, mais próxima a
+        imagem fica da intenção artística.</strong>
+      </p>
+    </section>
+
   </main>
-  <footer><span>Portfólio digital — Arte, técnica e tecnologia</span><span>2026</span></footer>
+
+  <footer>
+    <span>Portfólio digital — Arte, técnica e tecnologia</span>
+    <span>2026</span>
+  </footer>
 </body>
 </html>

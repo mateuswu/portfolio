@@ -3,26 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfólio digital sobre arte, técnica e tecnologia.">
-  <title>PINCEL DE CÓDIGO (CSS ART) | Portfólio</title>
+  <meta name="description" content="Pincel de código — releitura de obra geométrica de Mondrian em HTML e CSS puro.">
+  <title>CSS Art | Portfólio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="topo">
     <a class="marca" href="index.html">PORTFÓLIO<span>.</span></a>
     <nav aria-label="Menu principal">
-      <a href="index.html" class="">Início</a>
-      <a href="arte-ia.html" class="">Arte com IA</a>
-      <a href="pixel-art.html" class="">Pixel Art</a>
-      <a href="glitch-art.html" class="">Glitch Art</a>
+      <a href="index.html">Início</a>
+      <a href="arte-ia.html">Arte com IA</a>
+      <a href="pixel-art.html">Pixel Art</a>
+      <a href="glitch-art.html">Glitch Art</a>
       <a href="css-art.html" class="ativo">CSS Art</a>
     </nav>
   </header>
 
-  <main class="pagina tema">
-    <p class="etiqueta">PORTFÓLIO DIGITAL • PRODUÇÕES</p>
-    <h1>PINCEL DE CÓDIGO (CSS ART)</h1>
+  <main class="pagina css-pagina">
+
+    <!-- APRESENTAÇÃO -->
+    <section class="css-intro">
+      <p class="etiqueta">PORTFÓLIO DIGITAL • PRODUÇÕES</p>
+      <h1>PINSEL DE <span>CÓDIGO</span></h1>
+      <p class="css-descricao">
+        Assim como um pintor utiliza pincéis e tintas, nesta atividade o
+        <strong>código foi a ferramenta de criação</strong>. A obra abaixo é
+        uma releitura de uma composição geométrica de
+        <strong>Piet Mondrian</strong>, construída com
+        <strong>exclusivamente HTML e CSS</strong> — nenhuma imagem pronta.
+      </p>
+      <div class="css-tags">
+        <span class="css-tag">Piet Mondrian</span>
+        <span class="css-tag">HTML + CSS puro</span>
+        <span class="css-tag">Sem imagens prontas</span>
+      </div>
+    </section>
+
+    <!-- 01 — OBRA DE REFERÊNCIA -->
+    <section class="css-secao">
+      <p class="numero">01 / OBRA DE REFERÊNCIA</p>
+      <h2>A original</h2>
+
+      <figure class="css-figura css-figura-referencia">
+        <img
+          src="imagens/mondrian-original.jpg"
+          alt="Quadro Composition with Red, Blue and Yellow, de Piet Mondrian,1930: grandes planos vermelho, azul e amarelo separados por linhas pretas sobre fundo branco"
+        >
+        <figcaption>
+          Figura 1 — Piet Mondrian, <em>Composition with Red, Blue and Yellow</em>
+          (1930). Óleo sobre tela. Domínio público.
+        </figcaption>
+      </figure>
+    </section>
+
+    <!-- 02 — A RELEITURA -->
+    <section class="css-secao">
+      <p class="numero">02 / A RELEITURA</p>
+      <h2>A mesma composição em código</h2>
+
+      <div class="css-obra" role="img"
+           aria-label="Releitura em HTML e CSS da composição de Mondrian: plano vermelho no topo, coluna branca à esquerda com quadrado azul na base, faixa branca inferior e pequeno quadrado amarelo no canto inferior direito, tudo separado por linhas pretas">
+        <div class="m m-vermelho"></div>
+        <div class="m m-branco-topo"></div>
+        <div class="m m-branco-meio"></div>
+        <div class="m m-azul"><span class="m-assinatura">P M 30</span></div>
+        <div class="m m-branco-base"></div>
+        <div class="m m-canto">
+          <div class="m-branco-mini"></div>
+          <div class="m-amarelo"></div>
+        </div>
+      </div>
+
+      <p class="css-legenda">
+        Figura 2 — Releitura criada com 6 elementos HTML e uma grade CSS.
+        Passe o mouse sobre a obra.
+      </p>
+    </section>
+
+    <!-- 03 — PROCESSO -->
+    <section class="css-secao">
+      <p class="numero">03 — PROCESSO DE CONSTRUÇÃO</p>
+      <h2>Como foi feito</h2>
+
+      <p>
+        A base da obra é uma <strong>grade CSS</strong> (<code>display: grid</code>)
+        com três colunas e três linhas em proporções diferentes. O fundo
+        preto do container aparece nas frestas da grade — ou seja,
+        <strong>as linhas pretas de Mondrian são apenas o espaçamento
+        entre as células</strong>.
+      </p>
+
+      <pre class="css-snippet"><code>.css-obra {
+  display: grid;
+  grid-template-columns: 0.95fr 4fr 1.1fr;
+  grid-template-rows: 1.15fr 1.55fr 1.15fr;
+  gap: 8px;            /* as linhas pretas */
+  background: #0d0d0d;
+  aspect-ratio: 1 / 1;
+}
+.m-vermelho { grid-area: 1 / 2 / 3 / 4; }  /* ocupa 2 linhas, 2 colunas */
+.m-azul     { grid-area: 3 / 1 / 4 / 2; }</code></pre>
+
+      <p>
+        Cada bloco de cor é uma <code>&lt;div&gt;</code> posicionada com
+        <code>grid-area</code>. O grande plano vermelho ocupa duas linhas e
+        duas colunas da grade; o azul fica na célula inferior esquerda; e o
+        canto amarelo é uma coluna flexível com um quadrado branco em cima.
+        A assinatura “P M 30” é apenas um <code>&lt;span&gt;</code> — uma
+        homenagem ao original.
+      </p>
+
+      <p>
+        A releitura mantém as proporções e as cores primárias da referência,
+        mas foi adaptada às medidas da tela e ganhou um pequeno detalhe
+        interativo: ao passar o mouse, cada plano responde com um leve
+        realce de brilho, lembrando que, diferente da tinta, o código
+        <strong>pode reagir</strong>.
+      </p>
+    </section>
+
+    <!-- 04 — REFLEXÃO -->
+    <section class="css-secao css-reflexao">
+      <p class="numero">04 — CÓDIGO COMO PINCEL</p>
+      <h2>Regras cumpridas e reflexão</h2>
+
+      <ul class="css-check">
+        <li>Nenhuma imagem pronta foi usada na composição</li>
+        <li>Toda a obra foi construída apenas com elementos HTML e CSS</li>
+        <li>A obra original está apresentada apenas como referência</li>
+      </ul>
+
+      <p>
+        Reproduzir Mondrian com código mostrou que o HTML funciona como
+        moldura e o CSS como pigmento: cada propriedade é uma decisão
+        estética — proporção, cor, espaçamento. O resultado não precisa ser
+        idêntico ao original: como uma releitura, ele preserva a linguagem
+        geométrica do autor enquanto revela as possibilidades expressivas
+        da própria ferramenta técnica.
+      </p>
+    </section>
+
   </main>
-  <footer><span>Portfólio digital — Arte, técnica e tecnologia</span><span>2026</span></footer>
+
+  <footer>
+    <span>Portfólio digital — Arte, técnica e tecnologia</span>
+    <span>2026</span>
+  </footer>
 </body>
 </html>

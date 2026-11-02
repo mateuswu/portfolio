@@ -246,3 +246,555 @@ footer{
     }
 
 }
+
+/* ============ ARTE COM IA ============ */
+
+.ia-pagina {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.ia-intro {
+    margin-bottom: 70px;
+}
+
+.ia-intro h1 {
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    letter-spacing: -.06em;
+}
+
+.ia-intro h1 span {
+    color: var(--destaque);
+}
+
+.ia-descricao {
+    max-width: 680px;
+    margin-top: 25px;
+    color: var(--suave);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.ia-descricao strong {
+    color: var(--texto);
+}
+
+.ia-temas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.ia-tag {
+    padding: 7px 14px;
+    border: 1px solid #353535;
+    border-radius: 100px;
+    color: var(--suave);
+    font-size: .78rem;
+    letter-spacing: .04em;
+}
+
+.ia-secao {
+    max-width: 900px;
+    margin-bottom: 85px;
+    padding-top: 35px;
+    border-top: 1px solid #353535;
+}
+
+.ia-secao h2 {
+    margin: 12px 0 28px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -.04em;
+}
+
+.ia-secao > p:not(.numero):not(.ia-legenda):not(.ia-subtitulo) {
+    color: var(--suave);
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.ia-secao > p strong {
+    color: var(--texto);
+}
+
+.ia-figura {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: #1a1a18;
+    border: 1px solid #353535;
+    border-radius: 6px;
+}
+
+.ia-figura img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+.ia-figura img:hover {
+    transform: scale(1.02);
+}
+
+.ia-figura.sem-imagem img {
+    display: none;
+}
+
+.ia-placeholder {
+    display: none;
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 30px;
+    text-align: center;
+    color: var(--suave);
+    font-size: .92rem;
+    line-height: 1.7;
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #1a1a18,
+            #1a1a18 14px,
+            #191917 14px,
+            #191917 28px
+        );
+}
+
+.ia-figura.sem-imagem .ia-placeholder {
+    display: flex;
+}
+
+.ia-placeholder strong {
+    color: var(--destaque);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+}
+
+.ia-placeholder code {
+    padding: 3px 8px;
+    background: #252525;
+    border-radius: 4px;
+    color: var(--texto);
+    font-size: .85rem;
+}
+
+.ia-legenda {
+    margin: 14px 0 0;
+    color: var(--suave);
+    font-size: .8rem;
+    line-height: 1.7;
+}
+
+.ia-duas-colunas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 45px;
+}
+
+.ia-card {
+    padding: 25px;
+    background: #191917;
+    border: 1px solid #353535;
+    border-radius: 6px;
+}
+
+.ia-card-destaque {
+    border-color: var(--destaque);
+    background: #171b14;
+}
+
+.ia-card-label {
+    display: block;
+    margin-bottom: 14px;
+    color: var(--destaque);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+}
+
+.ia-prompt {
+    margin: 0;
+    padding: 14px 16px;
+    background: #111110;
+    border-left: 3px solid var(--destaque);
+    border-radius: 0 4px 4px 0;
+    color: #b9e8a8;
+    font-family: 'Courier New', monospace;
+    font-size: .87rem;
+    line-height: 1.7;
+    word-break: break-word;
+}
+
+.ia-card-nota {
+    margin: 14px 0 0 !important;
+    color: var(--suave);
+    font-size: .85rem !important;
+    line-height: 1.7 !important;
+}
+
+.ia-card-nota em {
+    color: var(--texto);
+    font-style: normal;
+    font-weight: 600;
+}
+
+.ia-subtitulo {
+    margin: 0 0 25px;
+    color: var(--texto);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: -.02em;
+}
+
+.ia-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid #353535;
+}
+
+.ia-passo {
+    position: relative;
+    padding: 0 0 40px 45px;
+}
+
+.ia-passo:last-child {
+    padding-bottom: 0;
+}
+
+.ia-passo-num {
+    position: absolute;
+    left: -17px;
+    top: -4px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--destaque);
+    color: #11100d;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: .9rem;
+    border-radius: 50%;
+}
+
+.ia-passo-corpo strong {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--texto);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.05rem;
+}
+
+.ia-passo-corpo .ia-card-nota {
+    margin-top: 12px !important;
+}
+
+.ia-reflexao .ia-final-nota {
+    margin-top: 30px;
+    padding: 22px 25px;
+    background: #171b14;
+    border: 1px solid var(--destaque);
+    border-radius: 6px;
+    color: var(--texto) !important;
+    font-size: .97rem !important;
+}
+
+@media(max-width: 700px) {
+
+    .ia-pagina {
+        padding-top: 60px;
+    }
+
+    .ia-intro {
+        margin-bottom: 50px;
+    }
+
+    .ia-secao {
+        margin-bottom: 65px;
+    }
+
+    .ia-duas-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .ia-passo {
+        padding-left: 38px;
+    }
+
+}
+
+/* ============ CSS ART ============ */
+
+.css-pagina {
+    padding-top: 80px;
+    padding-bottom: 100px;
+}
+
+.css-intro {
+    margin-bottom: 70px;
+}
+
+.css-intro h1 {
+    font-size: clamp(3.2rem, 7.5vw, 5.8rem);
+    letter-spacing: -.06em;
+}
+
+.css-intro h1 span {
+    color: var(--destaque);
+}
+
+.css-descricao {
+    max-width: 680px;
+    margin-top: 25px;
+    color: var(--suave);
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.css-descricao strong {
+    color: var(--texto);
+}
+
+.css-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.css-tag {
+    padding: 7px 14px;
+    border: 1px solid #353535;
+    border-radius: 100px;
+    color: var(--suave);
+    font-size: .78rem;
+    letter-spacing: .04em;
+}
+
+.css-secao {
+    max-width: 900px;
+    margin-bottom: 85px;
+    padding-top: 35px;
+    border-top: 1px solid #353535;
+}
+
+.css-secao h2 {
+    margin: 12px 0 28px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    letter-spacing: -.04em;
+}
+
+.css-secao > p:not(.numero):not(.css-legenda) {
+    color: var(--suave);
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.css-secao > p strong {
+    color: var(--texto);
+}
+
+.css-secao code {
+    padding: 2px 7px;
+    background: #252525;
+    border-radius: 4px;
+    color: #b9e8a8;
+    font-size: .87em;
+}
+
+.css-figura {
+    margin: 0;
+    max-width: 520px;
+}
+
+.css-figura img {
+    display: block;
+    width: 100%;
+    border: 1px solid #353535;
+    border-radius: 6px;
+}
+
+.css-figura figcaption {
+    margin-top: 14px;
+    color: var(--suave);
+    font-size: .8rem;
+    line-height: 1.7;
+}
+
+.css-figura figcaption em {
+    color: var(--texto);
+    font-style: italic;
+}
+
+/* --- A obra em CSS --- */
+
+.css-obra {
+    display: grid;
+    grid-template-columns: 1.4fr 4.05fr 1fr;
+    grid-template-rows: 1.1fr 1.6fr 1fr;
+    gap: 8px;
+    width: min(560px, 100%);
+    aspect-ratio: 1 / 1;
+    background: #0d0d0d;
+    border: 6px solid #0d0d0d;
+    border-radius: 4px;
+    cursor: crosshair;
+}
+
+.css-obra .m {
+    transition: filter .25s;
+}
+
+.css-obra .m:hover {
+    filter: brightness(1.12) saturate(1.15);
+}
+
+.m-vermelho {
+    grid-area: 1 / 2 / 3 / 4;
+    background: #dd2a1a;
+}
+
+.m-branco-topo {
+    grid-area: 1 / 1 / 2 / 2;
+    background: #f0efe7;
+}
+
+.m-branco-meio {
+    grid-area: 2 / 1 / 3 / 2;
+    background: #f0efe7;
+}
+
+.m-azul {
+    position: relative;
+    grid-area: 3 / 1 / 4 / 2;
+    background: #0f5fa0;
+}
+
+.m-assinatura {
+    position: absolute;
+    left: 12px;
+    bottom: 8px;
+    color: rgba(255, 255, 255, .55);
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: .72rem;
+    letter-spacing: .3em;
+}
+
+.m-branco-base {
+    grid-area: 3 / 2 / 4 / 3;
+    background: #f0efe7;
+}
+
+.m-canto {
+    grid-area: 3 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #0d0d0d;
+}
+
+.m-branco-mini {
+    flex: 1;
+    background: #f0efe7;
+}
+
+.m-amarelo {
+    flex: 0 0 40%;
+    background: #ecd94b;
+}
+
+.css-legenda {
+    margin: 14px 0 0;
+    color: var(--suave);
+    font-size: .8rem;
+    line-height: 1.7;
+}
+
+.css-snippet {
+    margin: 25px 0;
+    padding: 20px 22px;
+    overflow-x: auto;
+    background: #111110;
+    border: 1px solid #353535;
+    border-left: 3px solid var(--destaque);
+    border-radius: 0 4px 4px 0;
+    color: #b9e8a8;
+    font-family: 'Courier New', monospace;
+    font-size: .85rem;
+    line-height: 1.7;
+}
+
+.css-snippet code {
+    padding: 0;
+    background: none;
+    border-radius: 0;
+    color: inherit;
+    font-size: inherit;
+}
+
+.css-check {
+    list-style: none;
+    margin: 0 0 30px;
+    padding: 22px 25px;
+    background: #191917;
+    border: 1px solid #353535;
+    border-radius: 6px;
+}
+
+.css-check li {
+    position: relative;
+    padding: 8px 0 8px 32px;
+    color: var(--suave);
+    font-size: .95rem;
+    line-height: 1.6;
+}
+
+.css-check li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    color: var(--destaque);
+    font-weight: 700;
+}
+
+@media(max-width: 700px) {
+
+    .css-pagina {
+        padding-top: 60px;
+    }
+
+    .css-intro {
+        margin-bottom: 50px;
+    }
+
+    .css-secao {
+        margin-bottom: 65px;
+    }
+
+    .css-obra {
+        gap: 6px;
+        border-width: 4px;
+    }
+
+    .m-canto {
+        gap: 6px;
+    }
+
+}
